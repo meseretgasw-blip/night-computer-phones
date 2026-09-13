@@ -1,16 +1,14 @@
 # Night computer&phones
 
-Lightweight static storefront for **Night computer&phones**.
+A lightweight static storefront for Night computer&phones.
 
 ## Design
+- Premium light storefront with 21st.dev-inspired product-card interaction patterns.
+- CSS-only phone artwork and inline SVG brand mark — no image library or framework.
+- Pointer tilt, reveal-on-scroll, marquee, glass navigation and responsive layouts.
+- Reduced-motion support.
 
-- Clean light theme inspired by modern product-card interfaces.
-- Responsive mobile and desktop layout.
-- No frameworks, build tools, images, fonts, or runtime dependencies.
-- Intended to stay dramatically below the 24 MiB storage limit.
-
-## Source
-
-The featured device names are based on publicly indexed listings for the `@nightcomputer2` Telegram channel. Product availability and prices should be confirmed with the shop before publishing specific prices.
+## Deployment
+This is plain HTML/CSS/JS. No build step or dependencies are required. It is intended for Cloudflare Pages.
 
 Telegram: https://t.me/nightcomputer2
