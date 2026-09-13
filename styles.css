@@ -12,3 +12,17 @@
 .product-card:hover .real-product img{transform:scale(1.045) translateY(-5px);filter:drop-shadow(18px 28px 24px rgba(17,24,39,.22))}
 .samsung-fe-image img{max-width:88%;}
 @media(max-width:560px){.real-hero-image{height:370px;width:100%}.real-product{height:260px}.real-product img{height:235px}}
+
+
+/* Product cutouts: the image itself is transparent; never box it in. */
+.real-hero-image, .real-product { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+.real-hero-image { width: min(620px, 92%); height: 500px; display: grid; place-items: center; margin: 0 auto; }
+.real-hero-image::after, .real-product::after, .device-art.real-product::after { display: none !important; content: none !important; }
+.real-hero-image img { width: auto !important; height: min(470px, 88%); max-width: 96% !important; object-fit: contain !important; display: block; filter: drop-shadow(0 30px 34px rgba(16,24,39,.18)); mix-blend-mode: normal !important; }
+.device-art.real-product { height: 270px !important; width: 100% !important; margin: 8px auto 0 !important; transform: none !important; display: grid !important; place-items: center !important; }
+.real-product img { width: auto !important; height: 245px !important; max-width: 94% !important; object-fit: contain !important; display: block; filter: drop-shadow(0 22px 26px rgba(16,24,39,.16)); mix-blend-mode: normal !important; transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .45s ease !important; }
+.product-card:hover .real-product img { transform: translateY(-7px) scale(1.035) !important; filter: drop-shadow(0 28px 30px rgba(16,24,39,.20)); }
+.stage-card { background: transparent !important; border-color: transparent !important; box-shadow: none !important; }
+@media (max-width: 560px) { .real-hero-image { height: 390px; width: 100%; } .real-hero-image img { height: 355px !important; max-width: 100% !important; } .device-art.real-product { height: 255px !important; } .real-product img { height: 230px !important; max-width: 96% !important; } }
+.product-card:nth-child(3) .real-product img { height: 270px !important; }
+@media (max-width:560px){ .product-card:nth-child(3) .real-product img { height: 245px !important; } }
