@@ -26,3 +26,30 @@
 @media (max-width: 560px) { .real-hero-image { height: 390px; width: 100%; } .real-hero-image img { height: 355px !important; max-width: 100% !important; } .device-art.real-product { height: 255px !important; } .real-product img { height: 230px !important; max-width: 96% !important; } }
 .product-card:nth-child(3) .real-product img { height: 270px !important; }
 @media (max-width:560px){ .product-card:nth-child(3) .real-product img { height: 245px !important; } }
+
+
+/* Final product presentation fix: remove visible photo boxes and size the devices naturally. */
+.real-product, .real-hero-image { background: transparent !important; box-shadow: none !important; border: 0 !important; }
+.real-product::after, .real-hero-image::after { display:none !important; content:none !important; }
+.real-product { height: 250px !important; margin: 0 auto !important; transform:none !important; overflow:visible !important; }
+.real-product img { width:auto !important; height: 225px !important; max-width: 92% !important; object-fit:contain !important; display:block !important; mix-blend-mode:multiply !important; filter: drop-shadow(0 18px 22px rgba(16,24,39,.16)) !important; }
+/* Samsung source photos use dark studio backgrounds: screen-blend the black away. */
+.product-card:nth-child(1) .real-product img,
+.product-card:nth-child(2) .real-product img,
+.real-hero-image img { mix-blend-mode:screen !important; filter: drop-shadow(0 24px 28px rgba(16,24,39,.16)) !important; }
+.product-card:nth-child(1) .real-product img { height:205px !important; max-width:86% !important; }
+.product-card:nth-child(2) .real-product img { height:205px !important; max-width:86% !important; }
+.product-card:nth-child(3) .real-product img { height:215px !important; max-width:86% !important; }
+.product-card:nth-child(4) .real-product img,
+.product-card:nth-child(5) .real-product img { height:215px !important; max-width:88% !important; }
+.real-hero-image { height: 430px !important; width: min(560px, 94%) !important; }
+.real-hero-image img { height: 385px !important; max-width:88% !important; object-fit:contain !important; }
+@media (max-width:560px){
+  .real-product { height:235px !important; }
+  .real-product img { height:210px !important; max-width:94% !important; }
+  .product-card:nth-child(1) .real-product img, .product-card:nth-child(2) .real-product img { height:190px !important; max-width:88% !important; }
+  .product-card:nth-child(3) .real-product img { height:200px !important; }
+  .product-card:nth-child(4) .real-product img, .product-card:nth-child(5) .real-product img { height:205px !important; }
+  .real-hero-image { height:350px !important; width:100% !important; }
+  .real-hero-image img { height:325px !important; max-width:92% !important; }
+}
